@@ -40,13 +40,16 @@ int main(){
 			person[p]+=person[i];
 		}
 	}
-	for(int i=1;i<=N;i++) cout<<parent[i]<<" ";
+	// for(int i=1;i<=N;i++) cout<<parent[i]<<" ";
 		for(int i=1;i<=N;i++){
 			if(parent[i]!=i) continue;
 			for(int j=K-1;j-person[i]>=0;j--){
 				dp[j]=max(dp[j],dp[j-person[i]]+candy[i]);
 			}
+			cout<<i<<":"<<candy[i]<<" :";
+			for(int j=K-1;j>=0;j--) cout<<j<<":"<<dp[j]<<" ";
+			cout<<"\n";
 		}
-//	cout<<dp[K-1];
+	// cout<<dp[K-1];
 	return 0;
 }
