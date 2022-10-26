@@ -32,9 +32,9 @@ void sol(int start,int end,int n){
 int main(){
     int T;
     int i;
-    scanf("%d",&T);
-    for(i=0;i<T;i++){
-        memset(ans,0,sizeof(long)*10);
+    // scanf("%d",&T);
+    // for(i=0;i<T;i++){
+    //     memset(ans,0,sizeof(long)*10);
         long n;
         scanf("%ld",&n);
         sol(1,n,1);
@@ -42,5 +42,32 @@ int main(){
             printf("%ld ",ans[n]);
         }
         printf("\n");
-    }
+    // }
 }
+
+
+// void calcc(int n,int i){
+//     while(n){
+//         ans[n%10]=i;
+//         n/=10;
+//     }
+// }
+
+// void solcc(int start,int end, int n){
+//     while(start%10!=0&&start<=end){
+//         calcc(start,n);
+//         start++;
+//     }
+
+//     while(end%9!=0&&end>=start){
+//         calcc(end,n);
+//         end--;
+//     }
+
+//     int diff=(end/10 - start/10 +1);
+//     int i;
+//     for(i=0;i<10;i++){
+//         ans[i]+=diff*n;
+//     }
+//     solcc(start/10,end/10,n*10);
+// }
