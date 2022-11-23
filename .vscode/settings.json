@@ -16,6 +16,7 @@
         "memory": "cpp",
         "random": "cpp",
         "functional": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "iosfwd": "cpp"
     }
 }
