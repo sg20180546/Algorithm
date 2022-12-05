@@ -56,10 +56,7 @@ int main(){
 		vec.push_back(v);
 	}
 	sort(vec.begin(),vec.end(),cmp);
-//	cout<<"\n";
-//	for(int i=0;i<M;i++){
-//		cout<<vec[i][0]<<" "<<vec[i][1]<<" "<<vec[i][2]<<"\n";
-//	}
+
 	connected[vec[0][0]]=true;
 	connected[vec[0][1]]=true;
 	ans+=vec[0][2];

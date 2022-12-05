@@ -37,9 +37,9 @@ int main(){
     int x;
     for(int i=1;i<=N+Q-1;i++){
         cin>>x;
-        if(x){
+        if(x){ // is there path
             cin>>n1[i]>>n2[i];
-        }else{
+        }else{ // remove
             cin>>n1[i];
         }
     }
