@@ -28,10 +28,10 @@ void Djikstra(void){
         pq.pop();
         if(V[cur]<dist) continue;
 
-        for(auto edge: vertex[cur]){
-            int next=edge.end;
-            int weight=edge.weight;
-            if(V[next] > weight+V[cur]){
+        for(auto edge: vertex[cur]){ // for u in adj[v,u]
+            int next=edge.end; // u 
+            int weight=edge.weight; // e.w
+            if(V[next] > weight+V[cur]){ // u.d > e.w + v.d
                 pq.push({(weight+V[cur])*-1 ,next});
                 V[next]=weight+V[cur];
             }

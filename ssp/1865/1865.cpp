@@ -18,6 +18,7 @@ ll V[503];
 bool bellman_ford(){
     int ret=false;
     for ( auto edge : vec){
+            // relaxing
             if(V[edge.e]>V[edge.s]+edge.w ){
                 ret=true;
                 V[edge.e]=V[edge.s]+edge.w;
