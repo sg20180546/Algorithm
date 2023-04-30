@@ -43,6 +43,7 @@
         "tuple": "cpp",
         "typeinfo": "cpp",
         "queue": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "cstring": "cpp"
     }
 }

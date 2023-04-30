@@ -27,7 +27,7 @@ void PrintMap(){
 struct Camera{
     Camera * target;
     int cases=0;
-    Camera(): target(this) {}
+    Camera(int c): target(this),cases(c) { }
     void Watch(int i,int y,int x,vector<pair<int,int>>& coverage){
         switch (i)
         {
@@ -58,9 +58,7 @@ protected:
 };
 
 struct C1 : public Camera{
-    C1() {
-        cases=4;
-    }
+    C1() : Camera(4) {}
 private:
     //EAST
     void W0(int y, int x,vector<pair<int,int>>& coverage) override{
@@ -106,9 +104,7 @@ private:
 };
 struct C1 c1;
 struct C2 : public Camera{
-    C2(){
-        cases=2;
-    }
+    C2() : Camera(2) {}
 private:
     // VERITCAL
     void W0(int y, int x,vector<pair<int,int>>& coverage) override{
@@ -123,9 +119,7 @@ private:
 };
 
 struct C3 : public Camera{
-    C3(){
-        cases=4;
-    }
+    C3() : Camera(4) {}
 private:
     // NE
     void W0(int y, int x,vector<pair<int,int>>& coverage) override{
@@ -150,9 +144,7 @@ private:
 };
 
 struct C4 : public Camera{
-    C4(){
-        cases=4;
-    }
+    C4() :Camera(4) {}
 private:
     // EXECPT EAST
     void W0(int y, int x,vector<pair<int,int>>& coverage) override{
@@ -192,9 +184,7 @@ private:
     }
 };
 struct C5 : public Camera{
-    C5(){
-        cases=1;
-    }
+    C5() : Camera(1) {}
 private:
     void W0(int y, int x,vector<pair<int,int>>& coverage) override{
         for(int i=EAST;i<4;i++){
